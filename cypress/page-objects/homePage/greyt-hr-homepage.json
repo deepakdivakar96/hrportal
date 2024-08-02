@@ -1,0 +1,11 @@
+{
+    "page": {
+        "userid": "#username",
+        "pwd": "#password",
+        "login": "form > button"
+    },
+    "expectedData": {
+        "username": "PSS042",
+        "password": "Kajal@deep13"
+    }
+}

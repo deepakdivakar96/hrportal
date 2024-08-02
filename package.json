@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "test": "npx cypress run --spec cypress/e2e/**/**.**.js",
+    "uitest": "npx cypress run --spec cypress/e2e/ui-tests/**.**.js"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.1",
+    "cypress": "^13.13.2",
+    "cypress-mochawesome-reporter": "^3.8.1"
+  }
+}
