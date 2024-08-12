@@ -2,8 +2,7 @@ name: Run Test Cases
 
 on:
   schedule:
-    - cron: '0 10 * * 1-5'
-    - cron: '30 19 * * 1-5'
+    - cron: '52 19 * * 1-5'
 
 jobs:
   test:
