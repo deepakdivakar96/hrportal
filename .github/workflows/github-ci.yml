@@ -1,0 +1,19 @@
+name: Run Test Cases
+
+on:
+  schedule:
+    - cron: '0 10 * * 1-5'
+    - cron: '30 19 * * 1-5'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run tests
+      run: |
+        # Add the command to run your test cases here
+        echo "Running tests..."
