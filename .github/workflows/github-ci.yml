@@ -1,8 +1,8 @@
-name: Run Test Cases
+name: Run Cypress Tests
 
 on:
   schedule:
-    - cron: '30 14 * * 1-5'
+    - cron: '36 14 * * 1-5'  # Runs at 2:36 PM UTC, which is 8:06 PM IST on weekdays
 
 jobs:
   test:
@@ -12,7 +12,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Run tests
-      run: |
-        # Add the command to run your test cases here
-        echo "Running tests..."
+    - name: Install dependencies
+      run: npm i
+
+    - name: Run Cypress tests
+      run: npx cypress run --spec cypress/e2e/spec/GreytHRLogin.cy.js --browser chrome
