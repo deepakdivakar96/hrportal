@@ -23,3 +23,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('isElementVisible', (xpath) => {
+    return cy.xpath(xpath).then(($el) => {
+      // Check if the element exists and is visible
+      if ($el.length > 0 && $el.is(':visible')) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+  });
+  
