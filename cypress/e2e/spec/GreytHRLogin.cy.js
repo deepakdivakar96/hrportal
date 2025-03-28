@@ -29,5 +29,12 @@ describe("GreytHR Checkin and Checkout", function () {
     it("Login to GreytHR", function () {
         homepage.login();
     });
-    
+
+    it("Click on Sign In/Out Button", function () {
+        homepage.clickOnSignInBtn();
+    });
+
+    it("Click on Enter Sign In/Out Location Dropdown", function () {
+        homepage.selectLocation();
+    })
 });

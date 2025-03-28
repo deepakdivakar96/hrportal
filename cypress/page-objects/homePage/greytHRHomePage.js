@@ -33,4 +33,29 @@ module.exports = class GreytHRHomePage {
         cy.wait(5000);
         cy.get(homepage.page.login).click();
     }
+
+    clickOnSignInBtn() {
+        cy.wait(20000);
+        cy.get('div.btn-container > gt-button:first-child')
+            .shadow() // Access the shadow DOM
+            .find('button') // Find the actual button inside the shadow DOM
+            .click();
+    }
+
+    selectLocation() {
+        // Click the dropdown button inside shadow DOM
+        cy.get('gt-dropdown')
+            .shadow()
+            .find('.dropdown-button')
+            .click();
+
+        cy.wait(5000);
+
+        // Click the "Office" option inside shadow DOM
+        cy.get('gt-dropdown')
+            .shadow()
+            .find('.selected-item-text')
+            .should('contain.text', 'Office')
+            .click();
+    }
 }
