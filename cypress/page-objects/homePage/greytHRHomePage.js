@@ -58,4 +58,12 @@ module.exports = class GreytHRHomePage {
             .should('contain.text', 'Office')
             .click();
     }
+
+    clickOnSignInOutBtn() {
+        cy.get('gt-button[class*="flex justify-end hydrated"]') // Target specific gt-button
+            .shadow()
+            .find('button')
+            .contains('Sign') // Ensure it's the right button
+            .click();
+    }
 }

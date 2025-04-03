@@ -36,5 +36,9 @@ describe("GreytHR Checkin and Checkout", function () {
 
     it("Click on Enter Sign In/Out Location Dropdown", function () {
         homepage.selectLocation();
-    })
+    });
+
+    it("Click on Sign In/Out Button on the Popup", function () {
+        homepage.clickOnSignInOutBtn();
+    });
 });
