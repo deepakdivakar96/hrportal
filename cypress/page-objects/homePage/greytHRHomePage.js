@@ -54,8 +54,8 @@ module.exports = class GreytHRHomePage {
         // Click the "Office" option inside shadow DOM
         cy.get('gt-dropdown')
             .shadow()
-            .find('.selected-item-text')
-            .should('contain.text', 'Office')
+            .find('.item-label')
+            .contains('Office')
             .click();
     }
 
