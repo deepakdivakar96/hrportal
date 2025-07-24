@@ -2,7 +2,7 @@
     "page": {
         "userid": "#username",
         "pwd": "#password",
-        "login": "form > button"
+        "login": "form > div > button"
     },
     "expectedData": {
         "username": "PSS042",
