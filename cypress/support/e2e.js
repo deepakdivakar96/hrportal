@@ -19,3 +19,10 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 require('./commands')
 require('cypress-xpath');
+
+// Add this to suppress ResizeObserver loop errors
+Cypress.on('uncaught:exception', (err) => {
+  if (err.message.includes('ResizeObserver loop')) {
+    return false; // prevents test from failing
+  }
+});
